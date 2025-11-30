@@ -53,7 +53,8 @@ btn.addEventListener('click' , async ()=>{
     }
 
     const output = doc.getZip().generate({
-        type:"blob"
+        type:"blob",
+        mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     });
 
     const link = document.createElement("a");
@@ -65,5 +66,6 @@ btn.addEventListener('click' , async ()=>{
     }
     link.click();
 })
+
 
 

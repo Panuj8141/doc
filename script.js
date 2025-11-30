@@ -60,12 +60,13 @@ btn.addEventListener('click' , async ()=>{
     const link = document.createElement("a");
     link.href=URL.createObjectURL(output);
     if(fileName===""){
-        link.download="filled_template.docx"
+        link.download="Worksheet.docx"
     }else{
         link.download=`${fileName}.docx`;
     }
     link.click();
 })
+
 
 
 

@@ -3,8 +3,8 @@
   "short_name": "ReportGen",
   "description": "A tool to generate service and repair reports using placeholders.",
 
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/doc/",
+  "scope": "/doc/",
   "display": "standalone",
   "orientation": "portrait",
 
@@ -30,3 +30,4 @@
     }
   ]
 }
+

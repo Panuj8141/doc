@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docx generator</title>
+    <!-- PizZip for handling ZIP structure of DOCX -->
+    <script src="https://cdn.jsdelivr.net/npm/pizzip@3.0.6/dist/pizzip.min.js"></script>
+    <!-- docxtemplater for replacing placeholders in DOCX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.25.5/docxtemplater.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    
+ <div class="form-container">
+        <div>
+            <label for="service_code">Service Code No</label>
+            <input type="text" id="service_code" class="service_code" required>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" class="name" required>
+
+            <label for="address">Address</label>
+            <textarea id="address" class="address" rows="3" required></textarea>
+
+            <label for="division">Division</label>
+            <input type="text" id="division" class="division" required>
+
+            <label for="pharma_name">Pharma Name</label>
+            <input type="text" id="pharma_name" class="pharma_name" required>
+
+            <label for="brand_name">Brand Name</label>
+            <input type="text" id="brand_name" class="brand_name" required>
+
+            <label for="product_name">Product Name</label>
+            <input type="text" id="product_name" class="product_name" required>
+
+            <label for="serial_number">Serial Number</label>
+            <input type="text" id="serial_number" class="serial_number" required>
+
+            <label for="issue_problem">Issue / Problem</label>
+            <textarea id="issue_problem" class="issue_problem" rows="3" required></textarea>
+
+            <label for="defect_by_technician">Defect Detected by Technician</label>
+            <textarea id="defect_by_technician" class="defect_by_technician" rows="3" required></textarea>
+
+            <label for="defected_parts">Defected Parts</label>
+            <input type="text" id="defected_parts" class="defected_parts" required>
+
+            <label for="parts_cost">Parts Cost</label>
+            <input type="number" id="parts_cost" class="parts_cost" required>
+
+            <label for="repaired_date">Repaired Date</label>
+            <input type="date" id="repaired_date" class="repaired_date" required>
+
+            <label for="challan_number">Challan / Invoice Number</label>
+            <input type="text" id="challan_number" class="challan_number" required>
+
+            <label for="courier_details">Courier Details</label>
+            <textarea id="courier_details" class="courier_details" rows="3" required></textarea>
+
+            <label for="file_name">File Name</label>
+            <input type="text" id="file_name" class="file_name" required>
+
+            <button class="submit-btn js-btn" type="submit">Generate</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.error("SW registration failed:", err));
+}
+</script>
+
+</body>
+</html>
